@@ -1,14 +1,14 @@
 package homeS1;
 
-public class Cat {
-    public String catname;
-    public String state;
+public final class Cat {
+    private String catname;
+    private String state;
 
     public Cat(String catname, String state){
             this.state = state;
             this.catname = catname;
         }
-        static String[] stateCat = new String[]{
+        private static String[] stateCat = new String[]{
                 "feeded", "played", "pated", "kittyed",  "viewed"
         };
 
@@ -18,7 +18,7 @@ public class Cat {
         this.catname =  "Barsik";
     }
 
-    public Boolean ChechOperation(Human currentHuman){
+    private Boolean ChechOperation(Human currentHuman){
         if (currentHuman.privileges.equals("owner")) {
             return true;
         }
@@ -50,7 +50,7 @@ public class Cat {
         return null;
     }
 
-    public void DoAction(Human currentHuman){
+    private void DoAction(Human currentHuman){
         switch (currentHuman.action){
             case "feed":
                 DoFeed(currentHuman);
@@ -99,6 +99,10 @@ public class Cat {
     private void DoView(Human currentHuman){
 
         System.out.println("Cat view");
+    }
+
+    public String getName(){
+        return catname;
     }
 }
 

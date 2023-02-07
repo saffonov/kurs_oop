@@ -6,12 +6,14 @@ public class Main {
         Human userHuman = new Human("nik", "user", "play");
         Human guestHuman = new Human("kate", "guest", "view");
 
-        myCat.DoAction(ownerHuman);
-        myCat.DoAction(userHuman);
-        myCat.DoAction(guestHuman);
+        System.out.println(myCat.getName());
 
-        guestHuman.setAction("feed");
-        System.out.println(guestHuman);
-        myCat.DoAction(guestHuman);
+//        myCat.DoAction(ownerHuman);
+//        myCat.DoAction(userHuman);
+//        myCat.DoAction(guestHuman);
+//
+//        guestHuman.setAction("feed");
+//        System.out.println(guestHuman);
+//        myCat.DoAction(guestHuman);
     }
 }
